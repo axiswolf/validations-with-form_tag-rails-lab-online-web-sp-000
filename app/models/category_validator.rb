@@ -5,5 +5,7 @@ class CategoryValidator < ActiveModel::Validator
     end
   end
 
-
+  validates :title, presence: true
+  validates :content, :length => {:minimum => 100}
+  
 end
